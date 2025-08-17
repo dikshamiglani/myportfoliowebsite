@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Tasks App",
     description: "An app to add tasks, view your daily schedule, and get reminders. Created in less than 2 hours with an AI tool.",
-    tech: ["AI-Assisted", "Replit", "Vercel"],
+    tech: ["AI-Assisted", "Replit", "Vercel", "Github"],
     link: "https://tasksapp-flame.vercel.app/",
   },
   {

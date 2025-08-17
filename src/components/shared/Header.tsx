@@ -2,10 +2,12 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Rocket } from "lucide-react";
+import { WingsIcon } from "../icons/WingsIcon";
 
 const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
+  { href: "#resume", label: "Resume" },
   { href: "#case-studies", label: "Case Studies" },
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },

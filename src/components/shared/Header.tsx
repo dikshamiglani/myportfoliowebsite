@@ -27,9 +27,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link href="/suggestions">
-            <Button variant="outline">Suggestion Tool</Button>
-          </Link>
         </nav>
 
         <div className="md:hidden">
@@ -47,9 +44,6 @@ export function Header() {
                     {link.label}
                   </Link>
                 ))}
-                 <Link href="/suggestions">
-                    <Button variant="outline" className="w-full">Suggestion Tool</Button>
-                </Link>
               </nav>
             </SheetContent>
           </Sheet>

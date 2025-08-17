@@ -8,7 +8,7 @@ export function ResumeSection() {
     <section id="resume" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Resume</h2>
-        <Card className="max-w-4xl mx-auto shadow-lg overflow-hidden">
+        <Card className="max-w-5xl mx-auto shadow-lg overflow-hidden">
           <CardContent className="text-center p-8">
             <div className="mb-8 border rounded-lg p-2 sm:p-4 shadow-inner bg-background/50">
               <div className="aspect-[8.5/11] w-full">

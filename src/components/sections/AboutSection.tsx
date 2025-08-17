@@ -4,7 +4,7 @@ export function AboutSection() {
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary">
       <div className="container mx-auto px-4">
-        <Card className="max-w-4xl mx-auto shadow-lg">
+        <Card className="max-w-5xl mx-auto shadow-lg">
           <CardHeader>
             <CardTitle className="text-3xl md:text-4xl text-center text-primary">About Me</CardTitle>
           </CardHeader>

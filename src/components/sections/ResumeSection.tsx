@@ -12,7 +12,7 @@ export function ResumeSection() {
         <Card className="max-w-4xl mx-auto shadow-lg overflow-hidden">
           <CardContent className="text-center p-8">
             <div className="mb-8 border rounded-lg p-2 sm:p-4 shadow-inner bg-background/50 relative group">
-                <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="block">
+                <Link href="/diksharesume.pdf" target="_blank" rel="noopener noreferrer" className="block">
                     <Image
                     src="https://placehold.co/800x1100.png"
                     alt="Resume Preview"
@@ -27,7 +27,7 @@ export function ResumeSection() {
                 </Link>
             </div>
              <p className="text-sm text-muted-foreground mb-6">Click the preview to open my full resume in a new tab.</p>
-            <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" passHref>
+            <Link href="/diksharesume.pdf" target="_blank" rel="noopener noreferrer" passHref>
                 <Button size="lg">
                     Download Resume <ExternalLink className="ml-2 h-5 w-5" />
                 </Button>

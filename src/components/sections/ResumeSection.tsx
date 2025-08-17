@@ -11,12 +11,14 @@ export function ResumeSection() {
         <Card className="max-w-4xl mx-auto shadow-lg overflow-hidden">
           <CardContent className="text-center p-8">
             <div className="mb-8 border rounded-lg p-2 sm:p-4 shadow-inner bg-background/50">
-              <div className="aspect-[8/11] w-full">
-                <iframe
-                  src="/diksharesume.pdf"
-                  title="Diksha Miglani's Resume"
+              <div className="aspect-[8.5/11] w-full">
+                <object
+                  data="/diksharesume.pdf"
+                  type="application/pdf"
                   className="w-full h-full rounded-md"
-                />
+                >
+                  <p>Your browser does not support PDFs. <Link href="/diksharesume.pdf" className="text-primary underline">Download the PDF</Link>.</p>
+                </object>
               </div>
             </div>
              <p className="text-sm text-muted-foreground mb-6">You can scroll within the resume preview above or open it in a new tab.</p>

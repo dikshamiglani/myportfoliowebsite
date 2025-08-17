@@ -9,25 +9,25 @@ const contactFormSchema = z.object({
   message: z.string().min(10),
 });
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // IMPORTANT: You need to replace this email with your own and verify it with Resend.
-const TO_EMAIL = 'delivered@resend.dev'; 
+const TO_EMAIL = 'delivered@resend.dev';
 const FROM_EMAIL = 'onboarding@resend.dev';
 
 export async function sendContactMessage(formData: {name: string, email: string, message: string}) {
+  if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not set');
+      return { success: false, error: 'Server configuration error. The API key is missing.'}
+  }
+
   const parsed = contactFormSchema.safeParse(formData);
 
   if (!parsed.success) {
     return { success: false, error: 'Invalid form data.' };
   }
 
-  if (!process.env.RESEND_API_KEY) {
-      console.error('RESEND_API_KEY is not set');
-      return { success: false, error: 'Server configuration error.'}
-  }
-
   const { name, email, message } = parsed.data;
+  
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
     const { data, error } = await resend.emails.send({

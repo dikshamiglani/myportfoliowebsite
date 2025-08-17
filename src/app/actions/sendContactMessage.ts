@@ -10,7 +10,7 @@ const contactFormSchema = z.object({
 });
 
 // IMPORTANT: You need to replace this email with your own and verify it with Resend.
-const TO_EMAIL = 'delivered@resend.dev';
+const TO_EMAIL = 'your.email@example.com';
 const FROM_EMAIL = 'onboarding@resend.dev';
 
 export async function sendContactMessage(formData: {name: string, email: string, message: string}) {

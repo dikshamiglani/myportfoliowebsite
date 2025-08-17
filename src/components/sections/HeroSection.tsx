@@ -19,7 +19,10 @@ export function HeroSection() {
             className="rounded-full mx-auto mb-8 shadow-2xl border-4 border-card"
             data-ai-hint="professional headshot"
           />
-          <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-4xl md:text-5xl font-headline font-bold text-primary mt-8">
+            Diksha Miglani
+          </p>
+          <p className="text-xl md:text-2xl text-foreground/80 my-8 max-w-2xl mx-auto">
             Product Manager | Building Experiences | Driving Growth
           </p>
           <div className="space-x-4">

@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-secondary">
+    <section id="contact" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <Card className="max-w-2xl mx-auto shadow-lg">
           <CardHeader>

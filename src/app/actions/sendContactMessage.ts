@@ -21,6 +21,8 @@ export async function sendContactMessage(formData: {name: string, email: string,
   const parsed = contactFormSchema.safeParse(formData);
 
   if (!parsed.success) {
+    const errorDetails = parsed.error.issues.map(issue => `${issue.path.join('.')}: ${issue.message}`).join(', ');
+    console.error('Invalid form data:', errorDetails);
     return { success: false, error: 'Invalid form data.' };
   }
 
@@ -29,9 +31,8 @@ export async function sendContactMessage(formData: {name: string, email: string,
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    // Note: We use TO_EMAIL as the 'from' address as a best practice for deliverability with Resend.
     const { data, error } = await resend.emails.send({
-      from: `Portfolio Contact <${TO_EMAIL}>`,
+      from: 'Portfolio Contact <onboarding@resend.dev>',
       to: [TO_EMAIL],
       reply_to: email,
       subject: `New message from ${name} via your portfolio`,

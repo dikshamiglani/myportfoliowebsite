@@ -15,7 +15,7 @@ export function ResumeSection() {
                 <Link href="/diksharesume.pdf" target="_blank" rel="noopener noreferrer" className="block">
                     <Image
                     src="https://placehold.co/800x1100.png"
-                    alt="Resume Preview"
+                    alt="Preview of Diksha Miglani's Resume"
                     width={800}
                     height={1100}
                     className="w-full h-auto object-contain rounded-md transition-opacity duration-300 group-hover:opacity-75"

@@ -6,6 +6,9 @@ export function HeroSection() {
     <section id="home" className="py-20 md:py-32">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl md:text-5xl font-bold text-primary mb-8">
+            Product Management | User Solutions | Vibe Coding | AI Applications
+          </h1>
           <Image
             src="https://placehold.co/300x300.png"
             alt="Diksha Miglani Headshot"

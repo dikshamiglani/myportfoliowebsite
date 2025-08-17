@@ -9,9 +9,8 @@ const contactFormSchema = z.object({
   message: z.string().min(10),
 });
 
-// IMPORTANT: This is the email address where you will receive messages.
+// This is the email address where you will receive messages.
 const TO_EMAIL = 'dikshamiglani06@gmail.com';
-const FROM_EMAIL = 'onboarding@resend.dev';
 
 export async function sendContactMessage(formData: {name: string, email: string, message: string}) {
   if (!process.env.RESEND_API_KEY) {
@@ -30,8 +29,9 @@ export async function sendContactMessage(formData: {name: string, email: string,
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
+    // Note: We use TO_EMAIL as the 'from' address as a best practice for deliverability with Resend.
     const { data, error } = await resend.emails.send({
-      from: `Portfolio Contact Form <${FROM_EMAIL}>`,
+      from: `Portfolio Contact <${TO_EMAIL}>`,
       to: [TO_EMAIL],
       reply_to: email,
       subject: `New message from ${name} via your portfolio`,

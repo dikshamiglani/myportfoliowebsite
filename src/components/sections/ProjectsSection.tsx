@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "This very website, built to showcase my skills and projects using a modern tech stack.",
-    tech: ["Next.js", "Tailwind CSS", "TypeScript", "Genkit"],
+    tech: ["AI-Assisted", "Firebase Studio", "Claude", "Github"],
     link: "#",
   },
 ];

@@ -10,7 +10,7 @@ export function Footer() {
           <Link href="https://www.linkedin.com/in/dikshamiglani/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="hover:text-accent">
             <Linkedin />
           </Link>
-          <Link href="#" aria-label="GitHub Profile" className="hover:text-accent">
+          <Link href="https://github.com/dikshamiglani" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="hover:text-accent">
             <Github />
           </Link>
         </div>

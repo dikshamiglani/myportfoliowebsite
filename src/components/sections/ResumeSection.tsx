@@ -13,7 +13,7 @@ export function ResumeSection() {
             <div className="mb-8 border rounded-lg p-2 sm:p-4 shadow-inner bg-background/50">
               <div className="aspect-[8.5/11] w-full">
                 <object
-                  data="/diksharesume.pdf"
+                  data="/diksharesume.pdf#toolbar=0"
                   type="application/pdf"
                   className="w-full h-full rounded-md"
                 >

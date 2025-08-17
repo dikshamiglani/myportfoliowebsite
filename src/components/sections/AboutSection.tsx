@@ -31,14 +31,14 @@ export function AboutSection() {
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="pl-4 border-l-4 border-accent space-y-4">
               <h3 className="text-2xl font-bold text-primary/90">Technical Product Mindset</h3>
               <p>
                 I approach product development with a unique perspective: thinking like a developer when imagining solutions and finding bugs like a tester. I dive deep into data to uncover insights and validate solutions with business stakeholders, ensuring every product decision is both technically sound and commercially viable.
               </p>
             </div>
             
-            <div className="space-y-4">
+            <div className="pl-4 border-l-4 border-accent space-y-4">
               <h3 className="text-2xl font-bold text-primary/90">AI Integration Pioneer</h3>
               <p>
                 Currently, I&apos;m focused on incorporating AI into work processes and crafting intelligent solutions. I believe AI has provided product professionals with a much-needed sword that enables us to contribute meaningfully on the ground—transforming how we identify problems, design solutions, and deliver value to users.

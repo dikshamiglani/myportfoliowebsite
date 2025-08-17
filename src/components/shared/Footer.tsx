@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground mt-auto">
       <div className="container mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center">
-        <p>&copy; {new Date().getFullYear()} Alex Doe. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Diksha Miglani. All Rights Reserved.</p>
         <div className="flex gap-4 mt-4 sm:mt-0">
           <Link href="#" aria-label="LinkedIn Profile" className="hover:text-accent">
             <Linkedin />

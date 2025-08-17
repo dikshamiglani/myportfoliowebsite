@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Product Management | User Solutions | Vibe Coding | AI Applications',
+  title: 'Diksha Miglani | Product Manager',
   description: 'A professional portfolio for a product manager.',
 };
 

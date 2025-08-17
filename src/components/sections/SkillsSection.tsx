@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BrainCircuit, Lightbulb, Smartphone, Users } from "lucide-react";
+import { BrainCircuit, Lightbulb, Briefcase, Users } from "lucide-react";
 
 const skills = [
   {
@@ -18,9 +18,9 @@ const skills = [
     icon: <BrainCircuit className="h-10 w-10 text-primary" />,
   },
   {
-    name: "Mobile-First Product Development",
-    description: "Designing and building products with a mobile-first approach for optimal user experience.",
-    icon: <Smartphone className="h-10 w-10 text-primary" />,
+    name: "B2B & SaaS Solutions",
+    description: "Worked on SaaS-based solutions for B2B businesses and mobile apps for field workers.",
+    icon: <Briefcase className="h-10 w-10 text-primary" />,
   },
 ];
 

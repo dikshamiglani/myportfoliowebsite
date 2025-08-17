@@ -7,7 +7,9 @@ export function HeroSection() {
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold text-primary mb-8 leading-tight">
-            Product Management | User Solutions | Vibe&nbsp;Coding | AI Applications
+            Product Management | User Solutions | Vibe&nbsp;Coding
+            <br />
+            AI Applications
           </h1>
           <Image
             src="https://placehold.co/300x300.png"

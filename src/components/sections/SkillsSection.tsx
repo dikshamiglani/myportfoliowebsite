@@ -18,7 +18,7 @@ const skills = [
     icon: <BrainCircuit className="h-10 w-10 text-primary" />,
   },
   {
-    name: "B2B & SaaS Solutions",
+    name: "SAAS & Mobile solutions",
     description: "Worked on SaaS-based solutions for B2B businesses and mobile apps for field workers.",
     icon: <Briefcase className="h-10 w-10 text-primary" />,
   },

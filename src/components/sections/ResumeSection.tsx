@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink } from "lucide-react";
+import { Download } from "lucide-react";
 import Link from "next/link";
 
 export function ResumeSection() {
@@ -24,7 +24,7 @@ export function ResumeSection() {
              <p className="text-sm text-muted-foreground mb-6">You can scroll within the resume preview above or open it in a new tab.</p>
             <Link href="/diksharesume.pdf" target="_blank" rel="noopener noreferrer" passHref>
                 <Button size="lg">
-                    View Full Resume <ExternalLink className="ml-2 h-5 w-5" />
+                    Download Resume <Download className="ml-2 h-5 w-5" />
                 </Button>
             </Link>
           </CardContent>

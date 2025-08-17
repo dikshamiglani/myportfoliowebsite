@@ -32,7 +32,7 @@ export function ContactSection() {
             </form>
             <div className="text-center mt-8">
               <p className="text-foreground/80 mb-4">Or connect with me on</p>
-              <Link href="#" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.linkedin.com/in/dikshamiglani/" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="icon" aria-label="LinkedIn">
                   <Linkedin className="h-6 w-6 text-primary" />
                 </Button>

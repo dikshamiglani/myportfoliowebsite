@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Rocket, Wand2 } from "lucide-react";
+import { Menu, Rocket } from "lucide-react";
 
 const navLinks = [
   { href: "/#home", label: "Home" },
@@ -28,12 +28,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-           <Link href="/suggestions">
-            <Button variant="outline" size="sm">
-              <Wand2 className="mr-2 h-4 w-4" />
-              AI Suggestions
-            </Button>
-          </Link>
         </nav>
 
         <div className="md:hidden">
@@ -51,9 +45,6 @@ export function Header() {
                     {link.label}
                   </Link>
                 ))}
-                 <Link href="/suggestions" className="text-lg font-medium">
-                    AI Suggestions
-                 </Link>
               </nav>
             </SheetContent>
           </Sheet>

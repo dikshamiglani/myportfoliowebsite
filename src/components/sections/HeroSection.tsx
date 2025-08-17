@@ -12,7 +12,7 @@ export function HeroSection() {
             AI Applications
           </h1>
           <Image
-            src="https://placehold.co/300x300.png"
+            src="/Diksha.jpeg"
             alt="Diksha Miglani Headshot"
             width={300}
             height={300}

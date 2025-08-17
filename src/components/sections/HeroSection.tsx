@@ -23,7 +23,7 @@ export function HeroSection() {
             Diksha Miglani
           </p>
           <p className="text-xl md:text-2xl text-foreground/80 my-8 max-w-2xl mx-auto">
-            Product Manager | Building Experiences | Driving Growth
+            Product Manager | Building Experiences | Improving operations
           </p>
           <div className="space-x-4">
             <a href="#projects">

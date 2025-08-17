@@ -1,21 +1,21 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 const projects = [
+  {
+    title: "Tasks App",
+    description: "An app to add tasks, view your daily schedule, and get reminders. Created in less than 2 hours with an AI tool.",
+    tech: ["AI-Assisted", "Replit", "Vercel"],
+    link: "https://tasksapp-flame.vercel.app/",
+  },
   {
     title: "Portfolio Website",
     description: "This very website, built to showcase my skills and projects using a modern tech stack.",
     tech: ["Next.js", "Tailwind CSS", "TypeScript", "Genkit"],
-  },
-  {
-    title: "Side Project Hub",
-    description: "A platform to discover and collaborate on side projects, fostering innovation and learning.",
-    tech: ["React", "Firebase", "Node.js", "Express"],
-  },
-  {
-    title: "UX Feedback Tool",
-    description: "A browser extension for collecting and analyzing user feedback directly on live websites.",
-    tech: ["JavaScript", "HTML/CSS", "Webpack", "Chrome APIs"],
+    link: "#",
   },
 ];
 
@@ -31,13 +31,20 @@ export function ProjectsSection() {
                 <CardTitle>{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex-grow flex flex-col justify-end">
-                <div className="flex flex-wrap gap-2 mt-4">
+              <CardContent className="flex-grow">
+                <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
                     <Badge key={i} variant="outline">{tech}</Badge>
                   ))}
                 </div>
               </CardContent>
+              <CardFooter>
+                 <Link href={project.link} target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button variant="outline" className="w-full">
+                    View Project <ArrowUpRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardFooter>
             </Card>
           ))}
         </div>

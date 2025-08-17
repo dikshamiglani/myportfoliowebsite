@@ -1,17 +1,16 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Rocket } from "lucide-react";
-import { WingsIcon } from "../icons/WingsIcon";
+import { Menu, Rocket, Wand2 } from "lucide-react";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#resume", label: "Resume" },
-  { href: "#case-studies", label: "Case Studies" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#home", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#resume", label: "Resume" },
+  { href: "/#case-studies", label: "Case Studies" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -23,12 +22,18 @@ export function Header() {
           <span className="font-headline text-lg font-bold text-primary">Diksha Miglani</span>
         </Link>
 
-        <nav className="hidden md:flex gap-6 items-center">
+        <nav className="hidden md:flex gap-4 items-center">
           {navLinks.map(link => (
             <Link key={link.href} href={link.href} className="text-sm font-medium text-foreground/70 transition-colors hover:text-primary">
               {link.label}
             </Link>
           ))}
+           <Link href="/suggestions">
+            <Button variant="outline" size="sm">
+              <Wand2 className="mr-2 h-4 w-4" />
+              AI Suggestions
+            </Button>
+          </Link>
         </nav>
 
         <div className="md:hidden">
@@ -46,6 +51,9 @@ export function Header() {
                     {link.label}
                   </Link>
                 ))}
+                 <Link href="/suggestions" className="text-lg font-medium">
+                    AI Suggestions
+                 </Link>
               </nav>
             </SheetContent>
           </Sheet>

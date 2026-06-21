@@ -2,14 +2,14 @@
 {
   "hero": {
     "normal": {
-      "src": "/normal.jpeg",
+      "src": "/normal.jpg",
       "width": 600,
       "height": 600,
       "alt": "Diksha Miglani - Professional Photo",
       "aiHint": "professional headshot"
     },
     "ghibli": {
-      "src": "/ghibli.jpeg",
+      "src": "/ghibli.jpg",
       "width": 600,
       "height": 600,
       "alt": "Diksha Miglani - Ghibli Style Art",

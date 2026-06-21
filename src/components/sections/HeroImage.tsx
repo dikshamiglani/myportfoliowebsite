@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -10,13 +9,12 @@ export function HeroImage() {
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    // Sequence on load:
-    // 1. Show normal for 2s
+    // 1. Show normal for 2s on initial load
     const timer1 = setTimeout(() => {
       setShowGhibli(true);
     }, 2000);
 
-    // 2. Keep Ghibli for 5s (total 7s)
+    // 2. Keep Ghibli for 5s (total 7s), then transition back to normal
     const timer2 = setTimeout(() => {
       setShowGhibli(false);
     }, 7000);
@@ -36,7 +34,7 @@ export function HeroImage() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl border-4 border-primary/20 transition-all duration-700 transform group-hover:scale-105 group-hover:border-primary">
+      <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl border-4 border-primary/20 transition-all duration-1000 transform group-hover:scale-105 group-hover:border-primary">
         {/* Normal Image */}
         <Image
           src={imageData.hero.normal.src}

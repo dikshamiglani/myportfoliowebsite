@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -9,12 +10,12 @@ export function HeroImage() {
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    // 1. Show normal for 2s on initial load
+    // 1. Initial delay: Show normal for 2 seconds
     const timer1 = setTimeout(() => {
       setShowGhibli(true);
     }, 2000);
 
-    // 2. Keep Ghibli for 5s (total 7s), then transition back to normal
+    // 2. Display Ghibli for 5 seconds (until 7s total), then back to normal
     const timer2 = setTimeout(() => {
       setShowGhibli(false);
     }, 7000);
@@ -25,16 +26,19 @@ export function HeroImage() {
     };
   }, []);
 
-  // Show Ghibli if either the auto-timer is active OR the user is currently hovering
+  // Use Ghibli if either the auto-timer is running OR the user is currently hovering
   const effectivelyGhibli = isHovered || showGhibli;
 
   return (
     <div 
-      className="relative w-[280px] h-[280px] md:w-[350px] md:h-[350px] mx-auto mb-8 cursor-pointer group"
+      className="relative w-[280px] h-[280px] md:w-[350px] md:h-[350px] mx-auto mb-8 cursor-pointer group perspective-1000"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl border-4 border-primary/20 transition-all duration-1000 transform group-hover:scale-105 group-hover:border-primary">
+      <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl border-4 border-primary/10 transition-all duration-700 transform group-hover:scale-105 group-hover:border-primary/40 group-hover:shadow-[0_0_30px_rgba(var(--primary),0.3)]">
+        {/* Background Loading State */}
+        <div className="absolute inset-0 bg-muted animate-pulse" />
+
         {/* Normal Image */}
         <Image
           src={imageData.hero.normal.src}
@@ -47,6 +51,7 @@ export function HeroImage() {
           data-ai-hint={imageData.hero.normal.aiHint}
           priority
         />
+
         {/* Ghibli Image */}
         <Image
           src={imageData.hero.ghibli.src}
@@ -61,7 +66,7 @@ export function HeroImage() {
       </div>
       
       {/* Subtle indicator hint */}
-      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold text-primary tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">
+      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-[10px] font-bold text-primary tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 shadow-sm border border-primary/10">
         AI Magic
       </div>
     </div>

@@ -1,5 +1,6 @@
-import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
+import { HeroImage } from "./HeroImage";
 
 export function HeroSection() {
   return (
@@ -11,14 +12,9 @@ export function HeroSection() {
             <br />
             AI Applications
           </h1>
-          <Image
-            src="/Diksha.jpeg"
-            alt="Diksha Miglani Headshot"
-            width={300}
-            height={300}
-            className="rounded-full mx-auto mb-8 shadow-2xl border-4 border-card"
-            data-ai-hint="professional headshot"
-          />
+          
+          <HeroImage />
+
           <p className="text-4xl md:text-5xl font-headline font-bold text-primary mt-8">
             Diksha Miglani
           </p>

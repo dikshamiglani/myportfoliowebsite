@@ -10,12 +10,12 @@ export function HeroImage() {
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    // 1. Initial delay: Show normal for 2 seconds
+    // 1. Initial delay: Show normal for 2 seconds, then switch to Ghibli
     const timer1 = setTimeout(() => {
       setShowGhibli(true);
     }, 2000);
 
-    // 2. Display Ghibli for 5 seconds (until 7s total), then back to normal
+    // 2. Keep Ghibli for 5 seconds (until 7s total), then back to normal
     const timer2 = setTimeout(() => {
       setShowGhibli(false);
     }, 7000);
@@ -26,7 +26,7 @@ export function HeroImage() {
     };
   }, []);
 
-  // Use Ghibli if either the auto-timer is running OR the user is currently hovering
+  // Use Ghibli if either the auto-timer is active OR the user is currently hovering
   const effectivelyGhibli = isHovered || showGhibli;
 
   return (

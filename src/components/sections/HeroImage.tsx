@@ -42,9 +42,9 @@ export function HeroImage() {
         <Image
           src={imageData.hero.normal.src}
           alt={imageData.hero.normal.alt}
-          width={imageData.hero.normal.width}
-          height={imageData.hero.normal.height}
-          className={`absolute inset-0 object-cover transition-opacity duration-1000 ease-in-out ${
+          fill
+          sizes="(max-width: 768px) 280px, 350px"
+          className={`object-cover transition-opacity duration-1000 ease-in-out ${
             effectivelyGhibli ? "opacity-0" : "opacity-100"
           }`}
           data-ai-hint={imageData.hero.normal.aiHint}
@@ -55,9 +55,9 @@ export function HeroImage() {
         <Image
           src={imageData.hero.ghibli.src}
           alt={imageData.hero.ghibli.alt}
-          width={imageData.hero.ghibli.width}
-          height={imageData.hero.ghibli.height}
-          className={`absolute inset-0 object-cover transition-opacity duration-1000 ease-in-out ${
+          fill
+          sizes="(max-width: 768px) 280px, 350px"
+          className={`object-cover transition-opacity duration-1000 ease-in-out ${
             effectivelyGhibli ? "opacity-100" : "opacity-0"
           }`}
           data-ai-hint={imageData.hero.ghibli.aiHint}
